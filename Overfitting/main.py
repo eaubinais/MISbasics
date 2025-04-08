@@ -1,4 +1,9 @@
-from utils import Evaluator, Plotter
+import os
+
+from Utils.Evaluator import Evaluator
+from Utils.Plotter import Plotter
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 if __name__ == "__main__":
     evaluator = Evaluator()

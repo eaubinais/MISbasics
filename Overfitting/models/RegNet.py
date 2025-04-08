@@ -8,14 +8,14 @@ from lightning import LightningModule
 
 
 @dataclass
-class RegNetConfig:
+class Config:
     dim: int
     size: int
     lr: float
     threshold: list[float] = field(default_factory=lambda: [0.1])
 
 class RegNet(LightningModule):
-    def __init__(self, config: RegNetConfig):
+    def __init__(self, config: Config):
         super().__init__()
         self.config = config
 
